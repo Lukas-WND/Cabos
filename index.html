@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabos de Rede</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+    />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="imgs/icons8-cabo-de-rede-16.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Informe as especificações</h1>
+      </header>
+
+      <form action="" id="form" method="get">
+        <div class="form-typed">
+          <label for="velocidade">Velocidade</label>
+          <input type="number" id="velocidade" placeholder="Max. 40,000Mbps" />
+          <i><ion-icon class="error-icon" name="alert-circle"></ion-icon></i>
+          <i
+            ><ion-icon class="success-icon" name="checkmark-circle"></ion-icon
+          ></i>
+          <small>Insira um valor válido!</small>
+        </div>
+
+        <div class="form-typed">
+          <label for="comprimento">Comprimento</label>
+          <input type="number" id="comprimento" placeholder="Max. 100,000m" />
+          <i><ion-icon class="error-icon" name="alert-circle"></ion-icon></i>
+          <i
+            ><ion-icon class="success-icon" name="checkmark-circle"></ion-icon
+          ></i>
+          <small>Insira um valor válido!</small>
+        </div>
+
+        <div class="form-typed">
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" placeholder="5 - 15 por metro" />
+          <i><ion-icon class="error-icon" name="alert-circle"></ion-icon></i>
+          <i
+            ><ion-icon class="success-icon" name="checkmark-circle"></ion-icon
+          ></i>
+          <small>Insira um valor válido!</small>
+        </div>
+
+        <div class="form-select">
+          <div class="selection">
+            <label for="multiuso">Multiuso</label>
+            <select name="multiuso" id="multiuso">
+              <option value="Multiuso">Sim</option>
+              <option value="Sem multiuso">Nao</option>
+            </select>
+          </div>
+
+          <div class="selection">
+            <label for="blindagem">Blindagem</label>
+            <select name="blindagem" id="blindagem">
+              <option value="Sem blindagem">Sem blindagem</option>
+              <option value="metal">Metal</option>
+              <option value="vidro">Vidro</option>
+            </select>
+          </div>
+
+          <div class="selection">
+            <label for="rigidez">Rigidez</label>
+            <select name="rigidez" id="rigidez">
+              <option value="Rígido">Rígido</option>
+              <option value="Flexível">Flexível</option>
+            </select>
+          </div>
+
+          <div class="selection">
+            <label for="espessura">Espessura</label>
+            <select name="espessura" id="espessura">
+              <option value="Fino">Fino</option>
+              <option value="Médio">Médio</option>
+            </select>
+          </div>
+
+          <div class="selection">
+            <label for="cor">Cor</label>
+            <select name="cor" id="cor">
+              <option value="Preto">Preto</option>
+              <option value="Branco">Branco</option>
+              <option value="Verde">Verde</option>
+              <option value="Vermelho">Vermelho</option>
+              <option value="Azul">Azul</option>
+              <option value="Amarelo">Amarelo</option>
+              <option value="Cinza">Cinza</option>
+              <option value="Lilás">Lilás</option>
+              <option value="Laranja">Laranja</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-button" form="form">Verificar</button>
+        <button type="reset" id="reset-button" form="form">Limpar</button>
+      </form>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h1>Este é o seu cabo ideal</h1>
+        <div class="modal-result" id="resultados"></div>
+        <button id="fechar-modal">Sair</button>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
